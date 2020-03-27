@@ -1,0 +1,19 @@
+{
+  "name": "be_the_hero_back_end",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Librity/omnistack_week_11",
+  "author": "DiegoFernandes, Librity",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2",
+    "sucrase": "^3.12.1"
+  }
+}
