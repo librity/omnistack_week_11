@@ -10,7 +10,7 @@ const routes = Router();
 
 routes.get('/', RootController.test);
 
-routes.get('/sessions', SessionsController.create);
+routes.post('/sessions', SessionsController.create);
 
 routes.get('/ngos', NGOsController.index);
 routes.post('/ngos', NGOsController.create);
