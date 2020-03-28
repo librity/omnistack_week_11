@@ -1,19 +1,10 @@
-import React, { useState } from "react";
+import React from 'react';
 
-import "./global.css";
-import Login from "./pages/Login";
+import './global.css';
+import Routes from './routes';
 
-function App() {
-  const [counter, setCounter] = useState(0);
-
-  const incrementCounter = () => setCounter(counter + 1);
-
-  return (
-    <>
-      <Login title="Be The Hero">{counter}</Login>
-      <button onClick={incrementCounter}>Add</button>
-    </>
-  );
-}
+const App = () => {
+  return <Routes />;
+};
 
 export default App;
