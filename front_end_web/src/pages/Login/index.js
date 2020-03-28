@@ -1,6 +1,8 @@
 import React from "react";
 
-const Header = ({ title, children }) => {
+import "./styles.css";
+
+export default ({ title, children }) => {
   return (
     <header>
       <h1>{title}</h1>
@@ -8,5 +10,3 @@ const Header = ({ title, children }) => {
     </header>
   );
 };
-
-export default Header;

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
-import Header from "./Header";
+import "./global.css";
+import Login from "./pages/Login";
 
 function App() {
   const [counter, setCounter] = useState(0);
@@ -9,7 +10,7 @@ function App() {
 
   return (
     <>
-      <Header title="Be The Hero">{counter}</Header>
+      <Login title="Be The Hero">{counter}</Login>
       <button onClick={incrementCounter}>Add</button>
     </>
   );
