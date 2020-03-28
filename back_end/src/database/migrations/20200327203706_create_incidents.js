@@ -9,7 +9,7 @@ exports.up = knex => {
     table
       .foreign('ngo_id')
       .references('id')
-      .inTable('ongs');
+      .inTable('ngos');
   });
 };
 

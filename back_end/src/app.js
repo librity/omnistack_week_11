@@ -1,4 +1,6 @@
 import express from 'express';
+import cors from 'cors';
+
 import routes from './routes';
 
 class App {
@@ -13,6 +15,7 @@ class App {
 
   config() {
     this.server.use(express.json());
+    this.server.use(cors());
 
     this.server.use(express.static('public'));
   }
