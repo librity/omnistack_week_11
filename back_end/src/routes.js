@@ -1,35 +1,13 @@
 import { Router } from 'express';
-import crypto from 'crypto';
 
-import connection from './database/connection';
+import RootController from './controllers/RootController';
+import NGOsController from './controllers/NGOsController';
 
 const routes = Router();
 
-routes.get('/', (req, res) => {
-  return res.json({
-    application: 'Be the Hero',
-    event: 'RocketSeat - Semana Omnistack 11',
-    message: 'Hello World',
-  });
-});
+routes.get('/', RootController.test);
 
-routes.post('/ngos', async (req, res) => {
-  const { name, email, whatsapp, city, state } = req.body;
-
-  const id = crypto.randomBytes(4).toString('HEX');
-
-  await connection('ngos').insert({
-    id,
-    name,
-    email,
-    whatsapp,
-    city,
-    state,
-  });
-
-  return res.json({
-    id,
-  });
-});
+routes.get('/ngos', NGOsController.index);
+routes.post('/ngos', NGOsController.create);
 
 export default routes;

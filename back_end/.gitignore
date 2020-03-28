@@ -108,4 +108,7 @@ dist/
 tmp/
 temp/
 
+# SQLite databases
+*.sqlite
+
 # End of https://www.gitignore.io/api/node
