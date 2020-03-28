@@ -1,8 +1,17 @@
-import React from 'react';
+import React, { useState } from "react";
+
+import Header from "./Header";
 
 function App() {
+  const [counter, setCounter] = useState(0);
+
+  const incrementCounter = () => setCounter(counter + 1);
+
   return (
-    <h1>Hello World!</h1>
+    <>
+      <Header title="Be The Hero">{counter}</Header>
+      <button onClick={incrementCounter}>Add</button>
+    </>
   );
 }
 
