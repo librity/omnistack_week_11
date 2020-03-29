@@ -1,6 +1,5 @@
-import crypto from 'crypto';
-
 import connection from '../database/connection';
+import generateUniqueId from '../utils/generateUniqueId';
 
 class NGOsController {
   async index(req, res) {
@@ -12,7 +11,7 @@ class NGOsController {
   async create(req, res) {
     const { name, email, whatsapp, city, state } = req.body;
 
-    const id = crypto.randomBytes(4).toString('HEX');
+    const id = generateUniqueId();
 
     await connection('ngos').insert({ id, name, email, whatsapp, city, state });
 
